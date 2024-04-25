@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery Signup</title>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/564x/e4/4f/1e/e44f1eb649d59c46bc2b68203aa2db60.jpg');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: none; /* Removed background color */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: calc(100% - 22px); /* Adjusted width */
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #b38e8e;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      width: calc(100% - 22px); /* Adjusted width */
+      background-color: #0f0e0e; /* Changed button color */
+      color: rgb(58, 42, 42);
+      padding: 12px; /* Increased padding */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #827572; /* Changed hover color */
+    }
+
+    .link {
+      text-decoration: none;
+      color: #605757;
+    }
+  </style>
+</head>
+<body>
+  <form action="/signup" method="post">
+    <h2>Sign Up</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <input type="submit" value="Sign Up">
+    <p>Already have an account? <a class="link" href="/views/login.ejs">Login</a></p>
+  </form>
+</body>
+</html>
